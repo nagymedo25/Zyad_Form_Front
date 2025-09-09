@@ -1,0 +1,129 @@
+/* --- إعدادات أساسية --- */
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 20px; /* إضافة مساحة حول الفورم */
+    background-color: #f0f2f5; /* خلفية رمادية فاتحة مثل الصفحة الأصلية */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* --- تصميم حاوية الفورم --- */
+.form-container {
+    background-color: #ffffff; /* خلفية بيضاء صلبة */
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px; /* عرض أكبر للفورم الطويل */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* --- تصميم الشعار (اللوجو) --- */
+.logo-wrapper {
+    margin-bottom: 20px;
+}
+.form-logo {
+    max-width: 180px;
+    height: auto;
+}
+
+/* --- تصميم العناوين والنصوص --- */
+.form-container h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 26px;
+    font-weight: 700;
+}
+.required {
+    color: #d93025;
+    margin-right: 3px;
+}
+
+/* --- تصميم حقول الإدخال --- */
+.form-group {
+    margin-bottom: 20px;
+    text-align: right;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+    font-size: 15px;
+}
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0056b3; /* لون أزرق داكن */
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
+}
+
+/* --- تصميم خاص للـ Radio و Checkbox --- */
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-direction: column; /* ترتيب الخيارات تحت بعضها */
+    align-items: flex-start;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+.radio-group label, .checkbox-group label {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: normal;
+}
+.radio-group label:last-child, .checkbox-group label:last-child {
+    margin-bottom: 0;
+}
+.radio-group input, .checkbox-group input {
+    margin-left: 10px;
+}
+
+/* --- تصميم زر الإرسال --- */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #0056b3; /* لون أزرق داكن */
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Cairo', sans-serif;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #004494; /* درجة أغمق عند المرور */
+}
+
+/* كلاس لإخفاء العنصر */
+.hidden {
+    display: none;
+}
