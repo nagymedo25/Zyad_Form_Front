@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج تسجيل - احتفالية القوى الشبابية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body oncontextmenu="return false;">
+
+    <div class="form-wrapper">
+        <div class="form-header">
+            <img src="logo.jpg" alt="شعار المبادرة" class="form-logo">
+            <h1>استمارة التسجيل باحتفالية القوى الشبابية</h1>
+        </div>
+        
+        <form class="main-form" id="registrationForm" novalidate>
+            
+            <div class="form-group">
+                <label for="fullNameArabic">الاسم كامل بالعربي</label>
+                <input type="text" id="fullNameArabic" name="fullNameArabic" required>
+                <div class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="fullNameEnglish">الاسم كامل بالانجليزي</label>
+                <input type="text" id="fullNameEnglish" name="fullNameEnglish" required dir="ltr">
+                <div class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">الايميل</label>
+                <input type="email" id="email" name="email" required dir="ltr">
+                <div class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">رقم الموبايل (واتس اب)</label>
+                <input type="tel" id="mobile" name="mobile" required>
+                <div class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="nationalId">الرقم القومي</label>
+                <input type="text" id="nationalId" name="nationalId" required>
+                <div class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="age">السن</label>
+                <input type="number" id="age" name="age" required>
+                <div class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="education">المؤهل</label>
+                <input type="text" id="education" name="education" required>
+                <div class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="governorate">المحافظة</label>
+                <select id="governorate" name="governorate" required>
+                    <option value="" disabled selected>-- اختر محافظتك --</option>
+                    <option value="القاهرة">القاهرة</option>
+                    <option value="الجيزة">الجيزة</option>
+                    <option value="الأسكندرية">الأسكندرية</option>
+                    <option value="الدقهلية">الدقهلية</option>
+                    <option value="البحر الأحمر">البحر الأحمر</option>
+                    <option value="البحيرة">البحيرة</option>
+                    <option value="الفيوم">الفيوم</option>
+                    <option value="الغربية">الغربية</option>
+                    <option value="الإسماعلية">الإسماعلية</option>
+                    <option value="المنوفية">المنوفية</option>
+                    <option value="المنيا">المنيا</option>
+                    <option value="القليوبية">القليوبية</option>
+                    <option value="الوادي الجديد">الوادي الجديد</option>
+                    <option value="السويس">السويس</option>
+                    <option value="اسوان">اسوان</option>
+                    <option value="اسيوط">اسيوط</option>
+                    <option value="بني سويف">بني سويف</option>
+                    <option value="بورسعيد">بورسعيد</option>
+                    <option value="دمياط">دمياط</option>
+                    <option value="الشرقية">الشرقية</option>
+                    <option value="جنوب سيناء">جنوب سيناء</option>
+                    <option value="كفر الشيخ">كفر الشيخ</option>
+                    <option value="مطروح">مطروح</option>
+                    <option value="الأقصر">الأقصر</option>
+                    <option value="قنا">قنا</option>
+                    <option value="شمال سيناء">شمال سيناء</option>
+                    <option value="سوهاج">سوهاج</option>
+                </select>
+                <div class="error-message"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="source">عرفت المبادرة عن طريق ايه؟</label>
+                <input type="text" id="source" name="source" required>
+                <div class="error-message"></div>
+            </div>
+            
+            <div class="form-group">
+                <label>النوع</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="gender" value="male" required>
+                        <span class="radio-custom"></span>
+                        ذكر
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="gender" value="female">
+                        <span class="radio-custom"></span>
+                        أنثى
+                    </label>
+                </div>
+                <div class="error-message"></div>
+            </div>
+
+            <button type="submit">تسجيل</button>
+        </form>
+    </div>
+
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon">✓</div>
+            <h2>تم التسجيل بنجاح!</h2>
+            <p>شكرًا لك، تم استلام بياناتك وسيتم مراجعتها.</p>
+            <button id="closeModal">إغلاق</button>
+        </div>
+    </div>
+    
+    <script src="../validation.js"></script>
+
+</body>
+</html>
